@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+template<class dtype> dtype fun(dtype a, dtype b)
+{
+    return a>b?a:b;
+}
+int main()
+{
+    cout<<fun(6,7)<<endl;
+    cout<<fun(9.8,172.3);
+    return 0;
+}
