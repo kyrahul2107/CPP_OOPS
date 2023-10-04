@@ -1,1 +1,49 @@
-
+#include<iostream>
+using namespace std;
+ template<class dt>class Arraylist// defining template for the Arraylist
+ {
+     private:
+     struct controlBlock// defining controlBlock to control the arrarylist
+     {
+         int capacity;
+         dt *arrPtr;
+         
+     };
+     controlBlock *s;
+     public:
+     Arraylist(dt capacity)
+     {
+         s=new controlBlock;
+         s->capacity=capacity;
+         s->arrPtr=new int [s->capacity]; // making array of size of capacity
+     }
+     void addElement(int index,dt data)
+     {
+         if(index>=0&&index<=s->capacity-1)
+         s->arrPtr[index]=s->data;
+         else
+         cout<<"\n Array Index is not valid"<<endl;
+     }
+     void list()
+     {
+         int i=0;
+         for(int i=0;i<s->capacity;i++)
+         {
+             cout<<s->arrPtr[i]<<" ";
+         }
+     }
+ };
+ 
+ int main()
+ {
+    
+     Arraylist <int>list1(4);
+     list1.addElement(0,32);
+     
+         list1.addElement(0,36);
+              list1.addElement(0,38);
+                   list1.addElement(0,40);
+                 list1.list();
+                   return 0;
+     
+ }
